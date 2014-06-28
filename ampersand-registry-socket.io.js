@@ -61,13 +61,15 @@ util.inherits(SocketRegistry, Registry);
 
 // Add a model to the cache if it has not already been set
 SocketRegistry.prototype.store = function (model) {
-  (isArray(model) ? model : [model]).forEach(function (model) {
+  (Array.isArray(model) ? model : [model]).forEach(function (model) {
       var ns = model.getNamespace();
       var type = model.getType && model.getType() || model.type;
       var id = model.getId();
       var cache = this._getCache(ns);
       var key = type + id;
-      if (!type) throw Error('Models must have "modelType" attribute or "getType" method to store in registry');
+      if (!type) {
+        throw Error('Models must have "modelType" attribute or "getType" method to store in registry');
+      }
       // Prevent overriding a previously stored model
       cache[key] = cache[key] || model;
       this.socket.on(ns + ':' + type + ':' + id, this.handleSocketEvent);

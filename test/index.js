@@ -20,7 +20,8 @@ describe('ampersand-registry-socket.io tests', function () {
   });
 
   it('should be able to initialize a registry without socket.io', function (done) {
-    new SocketRegistry();
+    var registry = new SocketRegistry();
+    should.exist(registry);
     done();
   });
 
