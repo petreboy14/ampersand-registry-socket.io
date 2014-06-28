@@ -1,0 +1,41 @@
+{
+  "name": "ampersand-registry-socket.io",
+  "version": "0.0.1",
+  "description": "Adds socket.io support on top of the ampersand registry",
+  "main": "ampersand-registry-socket.io.js",
+  "scripts": {
+    "test": "./node_modules/lab/bin/lab -c test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/petreboy14/ampersand-registry-socket.io.git"
+  },
+  "keywords": [
+    "backbone",
+    "socket.io",
+    "registry",
+    "websocket",
+    "browser",
+    "browserify"
+  ],
+  "author": "Peter Henning",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/petreboy14/ampersand-registry-socket.io/issues"
+  },
+  "homepage": "https://github.com/petreboy14/ampersand-registry-socket.io",
+  "dependencies": {
+    "ampersand-registry": "^0.2.1",
+    "andlog": "^1.0.0",
+    "socket.io-client": "^1.0.6",
+    "underscore": "^1.6.0"
+  },
+  "devDependencies": {
+    "hapi": "^6.0.2",
+    "jshint": "^2.5.1",
+    "lab": "^3.2.1",
+    "precommit-hook": "^1.0.2",
+    "should": "^4.0.4",
+    "socket.io": "^1.0.6"
+  }
+}
